@@ -9,9 +9,9 @@ A concise English showcase of the [Digital Doctor Care Lab](https://digital-ther
 ## What's inside
 
 - **Conversation:** a focused dialogue area alongside the care workspace.
-- **Live Care Map:** the current skill, selected response move, and care guide.
-- **Skill Bank:** searchable registered skills and active response moves.
-- **Milestone Map:** completed, active, and upcoming care phases.
+- **Current response:** one card for the active skill, selected response move, and processing status.
+- **Skill details:** searchable skills and response moves, expanded on demand under Details.
+- **Care progress:** one ordered list of completed, current, and upcoming care phases.
 - **Memory Cabinet:** recent dialogue, continuity summaries, topics, and reminders.
 - **Case Formulation:** structured notes on concerns, triggers, and recurring patterns.
 

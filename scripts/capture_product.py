@@ -86,10 +86,10 @@ def main():
         for name, selector in [("conversation", ".conversation"), ("care-map", ".guide-card"),
                                ("skills", ".skill-deck"), ("milestones", ".milestone-deck")]:
             if name == "skills":
-                page.locator("#moveDetails").evaluate("el => el.open = true")
+                page.locator("#skillLibrary").evaluate("el => el.open = true")
             page.locator(selector).screenshot(path=str(assets / f"module-{name}.png"))
             if name == "skills":
-                page.locator("#moveDetails").evaluate("el => el.open = false")
+                page.locator("#skillLibrary").evaluate("el => el.open = false")
         page.locator("#formulation").evaluate("el => el.open = true")
         page.locator("#formulation").screenshot(path=str(assets / "module-formulation.png"))
         page.locator("#memoryOpen").click()
