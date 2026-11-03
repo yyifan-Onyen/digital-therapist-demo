@@ -51,6 +51,8 @@ python3 scripts/check_site.py
 
 `capture_product.py` fetches the public UI and intercepts every product API request with synthetic fixtures. It does not open a real profile, send messages, reset sessions, call a model, or import platform code. `render_video.py` uses only the exported screenshots. Generated working files stay in the ignored `.qa/` directory.
 
+To preview a platform UI change before deployment, pass an explicitly exported page with `python3 scripts/capture_product.py --html /absolute/path/to/exported-index.html`. The capture still uses synthetic API fixtures only.
+
 To replace the film, update `assets/digital-doctor-walkthrough.mp4`, its English `.vtt` captions, the poster, duration labels, and transcript together.
 
 This repository is an independent static presentation. Digital Doctor is a research prototype for supervised use; the showcase does not establish clinical efficacy.

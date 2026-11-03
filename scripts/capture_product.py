@@ -3,6 +3,7 @@
 Requires Python 3.10+, playwright and its Chromium browser. No account, credentials,
 model calls, local platform imports, or access to real conversations are needed.
 """
+import argparse
 import json
 from pathlib import Path
 from urllib.parse import urlparse
@@ -41,7 +42,10 @@ ACTIVITY = {"revision": 3, "status": "complete", "skill_id": "ocd_erp", "skill_v
 
 
 def main():
-    html = urlopen(ORIGIN, timeout=30).read().decode()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--html", type=Path, help="Capture an explicitly exported HTML file instead of the public UI")
+    args = parser.parse_args()
+    html = args.html.read_text() if args.html else urlopen(ORIGIN, timeout=30).read().decode()
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
     with sync_playwright() as p:
